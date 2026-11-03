@@ -25,7 +25,6 @@
 - **类比有边界**：说明类比中哪些部分对应概念，以及类比在哪里不再适用。
 - **即学即测**：小题检验核心理解，帮助发现“看懂了文字，却仍不会用”的情况。
 - **适合现场体验**：内置示例可直接打开；自由输入采用服务端排队和状态查询，页面显示等待进度。
-- **密钥留在服务端**：浏览器不接触模型 API Key。
 
 ## 技术实现
 
@@ -60,15 +59,14 @@ npm start
 
 打开 <http://127.0.0.1:3000/>。如需改端口，可在启动前设置 `$env:PORT = '3001'`。没有有效 API Key 或截止时间时，仍可点击内置示例；自由输入需要完整配置。Windows 本地启动器会在需要时读取系统代理，Docker 容器则直接运行 `server.js`。
 
-**不要把 API Key 写进代码、README 或提交到 GitHub。** `.gitignore` 已排除 `.env` 和常见本地用量文件。
 
 ## 环境变量
 
 | 变量 | 作用 |
 | --- | --- |
 | `OPENAI_API_KEY` | 自由输入所需的模型接口密钥。 |
-| `OPENAI_BASE_URL` | 兼容 Chat Completions 的接口地址；默认 `https://api.teamorouter.cn/v1`。 |
-| `OPENAI_MODEL` | 模型名称；默认 `deepseek-flash`。 |
+| `OPENAI_BASE_URL` | 兼容 Chat Completions 的接口地址。 |
+| `OPENAI_MODEL` | 模型名称。 |
 | `DEMO_EXPIRES_AT` | 演示截止时间，使用带时区的 ISO 8601 时间；到期后停止自由输入。 |
 | `DEMO_USAGE_FILE` | 模型任务累计用量文件；容器默认 `/mnt/workspace/zhiqiao-demo-usage.json`，本地需指定可写路径。 |
 | `DEMO_MODEL_CONCURRENCY` | 同时发出的模型请求数；默认 50，最多 100。 |
