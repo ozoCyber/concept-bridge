@@ -50,9 +50,9 @@
 
 ```powershell
 $env:OPENAI_API_KEY = [Environment]::GetEnvironmentVariable('OPENAI_API_KEY', 'User')
-$env:OPENAI_BASE_URL = 'https://api.teamorouter.cn/v1'
-$env:OPENAI_MODEL = 'deepseek-flash'
-$env:DEMO_EXPIRES_AT = (Get-Date).AddDays(7).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
+$env:OPENAI_BASE_URL = ''
+$env:OPENAI_MODEL = ''
+$env:DEMO_EXPIRES_AT = ''
 $env:DEMO_USAGE_FILE = Join-Path $env:TEMP 'concept-bridge-usage.json'
 npm start
 ```
@@ -81,4 +81,4 @@ npm run check
 node qa-deployment.mjs
 ```
 
-`qa-deployment.mjs` 使用本地模拟模型接口，不会调用付费模型。模型生成内容仍可能出错，涉及专业判断时应核对可靠资料。
+`qa-deployment.mjs` 使用本地模拟模型接口，不会调用模型api。
