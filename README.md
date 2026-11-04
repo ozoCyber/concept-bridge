@@ -2,7 +2,7 @@
 
 **把陌生概念，讲到你会用。**
 
-[在线体验（魔搭创空间）](https://modelscope.cn/studios/cyberchoi/zhiqiao)
+在线体验链接：[（魔搭创空间）](https://modelscope.cn/studios/cyberchoi/zhiqiao)
 
 知桥是一个面向跨专业阅读和自主学习的概念理解小助手。输入一个概念，还可以选填最想弄明白的具体问题；它会先回答问题，再用不同层次的解释、类比、实例和小题，帮助读者从“看过定义”走到“能够理解和使用”。
 
@@ -43,6 +43,10 @@
 ├── Dockerfile           # 容器部署配置
 └── package.json
 ```
+
+## 云端运行
+
+在线体验链接：[（魔搭创空间）](https://modelscope.cn/studios/cyberchoi/zhiqiao)
 
 ## 本地运行
 
